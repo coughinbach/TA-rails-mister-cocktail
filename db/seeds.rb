@@ -19,13 +19,13 @@ ingredients = JSON.parse(serialized_ingredients)
 
 puts "Creating ingredients..."
 ingredients["drinks"].each do |ingredient|
-  i = Ingredient.create!(name: ingredient["strIngredient1"])
+  i = Ingredient.create!(name: ingredient["strIngredient1"].downcase)
 end
 p "done"
 
 p "Creating cocktails"
 15.times do
-  cocktail = Cocktail.new(name: Faker::Hipster.words(2, false, true).join(" ").lowercase)
+  cocktail = Cocktail.new(name: Faker::Hipster.words(2, false, true).join(" ").downcase)
   cocktail.save
 end
 p "done-zo"

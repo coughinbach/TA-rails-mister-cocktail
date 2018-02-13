@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+h2 {
+  color: $orange;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h5 {
+  color: $blue;
+}
