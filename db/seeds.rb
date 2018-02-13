@@ -10,6 +10,9 @@ require "open-uri"
 require "json"
 require "faker"
 
+Cocktail.destroy_all
+Ingredient.destroy_all
+
 
 filepath = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 
