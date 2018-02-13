@@ -1,12 +1,42 @@
-<%= @cocktail.name %>
-<%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Remove #{cocktail.name}?" } do %>
-          remove
-        <% end %>
-<%= link_to "add new ingredient", new_cocktail_dose_path(@cocktail.id) %>
-<% @cocktail.doses.each do |dose| %>
-  <%= dose.description %>
-  <%= dose.ingredient.name %>
-  <%= link_to dose_path(dose), method: :delete, data: { confirm: "Remove #{dose.description} #{dose.ingredient.name}?" } do %>
-      remove
-   <% end %>
-<% end %>
+<div class="navbar navbar-fixed-top">
+  <%= link_to "https://www.github.com/coughinbach", class: "btn nav-btn" do %>
+    <i class="fab fa-github"></i>
+  <% end %>
+  <%= link_to cocktails_path, class: 'btn nav-btn' do %>
+    <i class="fa fa-history"></i>
+  <% end %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="show-container">
+        <%= image_tag "cocktail-icon.png", width: 200, class: "show-image" %>
+
+        <div class="show-name">
+          <h1><%= @cocktail.name %></h1>
+        </div>
+        <div class="show-ingredients">
+          <ul>
+            <% @cocktail.doses.each do |dose| %>
+              <li>
+                <p><%= dose.description %> <%= dose.ingredient.name %>
+                <%= link_to dose_path(dose), method: :delete, data: { confirm: "Remove #{dose.description} #{dose.ingredient.name}?" } do %>
+                  <i class="far fa-trash-alt"></i></p>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="user-actions">
+          <%= link_to new_cocktail_dose_path(@cocktail.id), class: 'btn btn-form' do %>
+            <i class="fa fa-plus"></i> add an ingredient
+          <% end %>
+          <%= link_to cocktail_path(@cocktail), class: 'btn btn-form', method: :delete, data: { confirm: "Delete #{@cocktail.name}?" } do %>
+            <i class="far fa-trash-alt"></i> delete cocktail
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
