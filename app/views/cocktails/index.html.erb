@@ -1,8 +1,25 @@
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
-  <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Remove #{cocktail.name}?" } do %>
-      remove
-   <% end %>
-<% end %>
+<div class="navbar navbar-fixed-top">
+  sup
+</div>
 
-<%= link_to "add new cocktail", new_cocktail_path %>
+<div class="banner">
+  <div class="banner-content">
+    <h1>get your drink on</h1>
+    <p>it's five o' clock somewhere, but who says you even have to wait?</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+        <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Remove #{cocktail.name}?" } do %>
+          remove
+        <% end %>
+      <% end %>
+      <%= link_to "add new cocktail", new_cocktail_path %>
+    </div>
+  </div>
+</div>
+
