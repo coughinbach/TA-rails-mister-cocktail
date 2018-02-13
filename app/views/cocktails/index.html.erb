@@ -1,5 +1,10 @@
 <div class="navbar navbar-fixed-top">
-  sup
+  <%= link_to "https://www.github.com/coughinbach", class: "btn nav-btn" do %>
+    <i class="fab fa-github"></i>
+  <% end %>
+  <%= link_to cocktails_path, class: 'btn nav-btn' do %>
+    <i class="fa fa-history"></i>
+  <% end %>
 </div>
 
 <div class="banner">
@@ -11,15 +16,33 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <% @cocktails.each do |cocktail| %>
-        <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
-        <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Remove #{cocktail.name}?" } do %>
-          remove
-        <% end %>
+    <div class="col-xs-10 col-xs-offset-1">
+      <h2>all cocktails</h2>
+      <%= link_to new_cocktail_path do %>
+        <i class="fa fa-plus"></i> add cocktail
       <% end %>
-      <%= link_to "add new cocktail", new_cocktail_path %>
+
+      <br>
+      <br>
+
+      <div class="cards">
+        <% @cocktails.each do |cocktail| %>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-name">
+                <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+              </div>
+              <i class="fa fa-glass"></i>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
 
+<div class="footer">
+  <div class="footer-text">
+    this cocktail manager was made with my <i class="fa fa-tint" aria-hidden="true"></i> at Le Wagon
+  </div>
+</div>
