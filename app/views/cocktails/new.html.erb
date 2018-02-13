@@ -1,5 +1,3 @@
-
-
 <div class="navbar">
   <%= link_to "https://www.github.com/coughinbach", class: "btn nav-btn" do %>
     <i class="fab fa-github"></i>
@@ -15,7 +13,7 @@
       <div class="form-container">
         <%= simple_form_for (@cocktail) do |f| %>
           <%= f.input :name, label: "name", placeholder: "get fancy!" %>
-          <%= f.submit class: 'btn btn-form'%>
+          <%= f.submit 'add to manager', class: 'btn btn-form' %>
         <% end %>
       </div>
     </div>
