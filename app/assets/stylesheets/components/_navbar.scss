@@ -1,11 +1,18 @@
-/* Main navbar */
-.navbar {
+.navbar, .navbar-blue {
   height: 50px;
   width: 100%;
   padding: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-blue {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: $blue;
 }
