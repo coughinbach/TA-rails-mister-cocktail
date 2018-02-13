@@ -1,4 +1,27 @@
-<%= simple_form_for (@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit class: 'btn btn-primary'%>
-<% end %>
+
+
+<div class="navbar">
+  <%= link_to "https://www.github.com/coughinbach", class: "btn nav-btn" do %>
+    <i class="fab fa-github"></i>
+  <% end %>
+  <%= link_to cocktails_path, class: 'btn nav-btn' do %>
+    <i class="fa fa-history"></i>
+  <% end %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="form-container">
+        <%= simple_form_for (@cocktail) do |f| %>
+          <%= f.input :name, label: "name", placeholder: "get fancy!" %>
+          <%= f.submit class: 'btn btn-form'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
