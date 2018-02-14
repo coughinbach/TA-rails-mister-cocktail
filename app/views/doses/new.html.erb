@@ -11,11 +11,7 @@
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
       <div class="form-container">
-        <%= simple_form_for [@cocktail, @dose] do |f| %>
-          <%= f.input :description, label: "amount", placeholder: "how much of this does the recipe require?" %>
-          <%= f.association :ingredient, label: "ingredient" %>
-          <%= f.submit "add to recipe", class: "btn btn-form" %>
-        <% end %>
+        <%= render "form" %>
       </div>
     </div>
   </div>

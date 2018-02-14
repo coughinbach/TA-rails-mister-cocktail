@@ -11,12 +11,7 @@
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
       <div class="form-container">
-        <%= simple_form_for (@cocktail) do |f| %>
-          <%= f.input :name, label: "name", placeholder: "get fancy!" %>
-          <%= f.submit 'add to manager', class: 'btn btn-form' %>
-          <%= f.input :photo, label: "add picture" %>
-          <%= f.input :photo_cache, as: :hidden %>
-        <% end %>
+        <%= render "cocktail-form" %>
       </div>
     </div>
   </div>

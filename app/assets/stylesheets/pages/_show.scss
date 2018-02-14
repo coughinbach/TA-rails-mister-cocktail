@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .show-image {
@@ -24,17 +24,34 @@
 }
 
 .show-ingredients {
-  width: 100%;
+  width: 40%;
   margin-top: 50px;
   display: flex;
-  justify-content: flex-start;
-  padding-left: 10%;
+  justify-content: center;
   p {
-    color: $black;
+    color: $gray;
     line-height: 20px;
   }
   i {
     color: $blue;
+  }
+  li {
+    color: $orange;
+  }
+}
+
+.add-ingredient {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  label {
+    color: $orange;
+    font-weight: normal;
+  }
+  abbr {
+    color: $gray;
+    text-decoration: none;
   }
 }
 
@@ -42,10 +59,13 @@ h1 {
   color: $orange;
 }
 
+
+
 .user-actions {
   margin-top: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
+  padding-left: 35px;
 }

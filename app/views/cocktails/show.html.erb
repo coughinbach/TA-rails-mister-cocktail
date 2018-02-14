@@ -27,11 +27,12 @@
               </li>
             <% end %>
           </ul>
+
+        </div>
+        <div class="add-ingredient">
+          <%= render "/doses/dose-form" %>
         </div>
         <div class="user-actions">
-          <%= link_to new_cocktail_dose_path(@cocktail.id), class: 'btn btn-form' do %>
-            <i class="fa fa-plus"></i> add an ingredient
-          <% end %>
           <%= link_to cocktail_path(@cocktail), class: 'btn btn-form', method: :delete, data: { confirm: "Delete #{@cocktail.name}?" } do %>
             <i class="far fa-trash-alt"></i> delete cocktail
           <% end %>
