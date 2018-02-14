@@ -35,8 +35,8 @@ gem 'faker'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
-gem 'figaro'
 gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

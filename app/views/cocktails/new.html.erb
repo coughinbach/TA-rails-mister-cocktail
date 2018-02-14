@@ -14,6 +14,8 @@
         <%= simple_form_for (@cocktail) do |f| %>
           <%= f.input :name, label: "name", placeholder: "get fancy!" %>
           <%= f.submit 'add to manager', class: 'btn btn-form' %>
+          <%= f.input :photo, label: "add picture" %>
+          <%= f.input :photo_cache, as: :hidden %>
         <% end %>
       </div>
     </div>
