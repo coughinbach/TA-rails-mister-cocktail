@@ -22,7 +22,7 @@ ingredients = JSON.parse(serialized_ingredients)
 
 puts "Creating ingredients..."
 ingredients["drinks"].each do |ingredient|
-  i = Ingredient.create!(name: ingredient["strIngredient1"].downcase)
+  Ingredient.create!(name: ingredient["strIngredient1"].downcase)
 end
 p "done"
 
